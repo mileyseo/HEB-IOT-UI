@@ -6,19 +6,26 @@
 }
 
 .btn {
-  margin-right: auto;
+  margin: 0 auto;
   width: 150px;
   padding: 8px 10px;
-  background: #ee2824;
+  background: #5a7be6;
   border-radius: 4px;
   color: white;
   text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  outline: none;
+  box-shadow: none;
 }
 
 .title {
   color: #333;
   padding-bottom: 20px;
   text-align: center;
+  font-weight: bold;
 }
 .text {
   color: #777;
