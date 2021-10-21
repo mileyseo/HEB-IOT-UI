@@ -5,10 +5,10 @@ export default function Navbar() {
     return (
         <nav>
             <div className="logo">
-            <Image src="/H-E-B_logo.svg.png" alt="logo" width={235} height={80}></Image>
+                <Link href="/"><Image src="/H-E-B_logo.svg.png" alt="logo" width={235} height={80}></Image></Link>
             </div>
             <Link href="/"><a>Home</a></Link>
-            <Link href="/categories"><a>Categories</a></Link>
+            <Link href="/contact"><a>Contact Us</a></Link>
         </nav>
     )
 } 
