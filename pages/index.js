@@ -8,11 +8,18 @@ import Link from 'next/link'
 export default function Home() {
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Inventory Hub</h1>
-      <p1 className={styles.text}>Select State: </p1>
-      <p1 className={styles.text}>Select City: </p1>
-      <p1 className={styles.text}>Select Location: </p1>
-      <Link href="/categories"><a>See Categories</a></Link>
+      <h2>Inventory Hub</h2>
+      <hr></hr>
+      <div className="dropdown m-3 dropend">
+        <button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" id="dropdownMenuButton1" aria-expanded="false">
+          Select Category {" "}
+        </button>
+        <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a className="dropdown-item" href="#"> Item 1</a></li>
+          <li><a className="dropdown-item" href="#"> Item 2</a></li>
+          <li><a className="dropdown-item" href="#"> Item 3</a></li>
+        </ul>
+      </div>
     </div>
   )
 }

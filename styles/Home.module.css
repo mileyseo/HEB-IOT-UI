@@ -1,8 +1,18 @@
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: right;
+  align-items: left;
+}
+
+.btn {
+  margin-right: auto;
+  width: 150px;
+  padding: 8px 10px;
+  background: #ee2824;
+  border-radius: 4px;
+  color: white;
+  text-align: center;
 }
 
 .title {
