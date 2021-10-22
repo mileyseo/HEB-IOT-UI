@@ -4,5 +4,11 @@
     "files": [
       "static/chunks/node_modules_next_dist_client_dev_noop_js.js"
     ]
+  },
+  "_app.js -> bootstrap/dist/js/bootstrap": {
+    "id": "./node_modules/bootstrap/dist/js/bootstrap.js",
+    "files": [
+      "static/chunks/node_modules_bootstrap_dist_js_bootstrap_js.js"
+    ]
   }
 }
