@@ -4,7 +4,7 @@ export default function Inventory() {
   return (
     <div className={styles.container}>
       <h2>Inventory List</h2>
-      <hr></hr>
+      <div className="img">
       <div className="dropdown m-3 dropend">
         <button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" id="dropdownMenuButton1" aria-expanded="false">
           Select Category {" "}
@@ -24,6 +24,7 @@ export default function Inventory() {
           <li><a className="dropdown-item" href="#"> Baby {"&"} Kids</a></li>
           <li><a className="dropdown-item" href="#"> Pets</a></li>
         </ul>
+      </div>
       </div>
     </div>
   )

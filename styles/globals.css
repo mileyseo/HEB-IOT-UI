@@ -4,7 +4,15 @@ body {
   background: #f2f2f2;
   color: #333;
   font-family: "Nunito";
+  text-align: center;
 }
+
+.img {
+  background-image: url("../images/store_background.jpeg");
+  opacity: 0.5;
+  padding: 16%;
+}
+
 a {
   color: #333;
   text-decoration: none;
