@@ -4,7 +4,7 @@ import Link from 'next/link'
 export default function Pantry() {
   return (
     <div>
-        Aisle Page here
+
     </div>
   )
 }
