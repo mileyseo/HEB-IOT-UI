@@ -1,39 +1,62 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
 
 body {
-  background: #f2f2f2;
-  color: #333;
-  font-family: "Nunito";
+    background: #f2f2f2;
+    color: #333;
+    font-family: "Nunito";
+    text-align: center;
 }
+
+.img {
+    background-image: url("../images/store_background.jpeg");
+    opacity: 0.5;
+    padding: 16%;
+}
+
 a {
-  color: #333;
-  text-decoration: none;
+    color: #333;
+    text-decoration: none;
 }
+
 .content {
-  max-width: auto;
-  margin: 0 auto;
+    max-width: auto;
+    margin: 0 auto;
 }
+
 nav {
-  margin: 10px auto 10px;
-  padding: 10px 0;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  border-bottom: 1px solid #ddd;
+    margin: 10px auto 10px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    border-bottom: 1px solid #ddd;
 }
+
 nav a {
-  margin-left: 12px;
+    margin-left: 12px;
 }
 
 nav .logo {
-  margin-right: auto;
+    margin-right: auto;
 }
 
 footer {
-  display: block;
-  text-align: center;
-  padding: 30px 0;
-  margin-top: 200px;
-  color: #777;
-  border-top: 1px solid #eaeaea;
+    display: block;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 200px;
+    color: #777;
+    border-top: 1px solid #eaeaea;
+}
+
+.contact {
+    padding: 5%;
+    text-align: center;
+}
+
+h3{
+    font-size: large;
+}
+a{
+    color: blue;
 }
