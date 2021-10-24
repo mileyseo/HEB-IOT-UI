@@ -1,9 +1,11 @@
 {
   "items": [
     {
-      "name": "",
       "id": 1,
-      "aisle": 6,
+      "name": "Sweet Corn",
+      "aisle": "6L",
+      "section": 3,
+      "shelf": 4,
       "qty": 123
     }
   ]
