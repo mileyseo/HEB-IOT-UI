@@ -1,11 +1,15 @@
-import styles from '../styles/Home.module.css'
-import { InferGetStaticPropsType } from 'next'
-import Item from '../pages/index.js'
-import Link from 'next/link'
+import styles from '../styles/Home.module.css';
+import {InferGetStaticPropsType} from "next";
 
+type Item = {
+    name: string
+    id: number
+    aisle: number
+    qty: number
+}
 
 export const getStaticProps = async () => {
-    const res = await fetch('https://.../posts')
+    const res = await fetch('https://github.com/mileyseo/HEB-IOT-UI/blob/master/db.json')
     const posts: Item[] = await res.json()
 
     return {
@@ -15,10 +19,15 @@ export const getStaticProps = async () => {
     }
 }
 
-export default function CannedDriedFood({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {
-  return (
-    <div>
-      <h1 className={styles.title}> Canned {"&"} Dried Food </h1>
-    </div>
-  )
+function CannedDriedFood({posts}: InferGetStaticPropsType<typeof getStaticProps>) {
+    return (
+        <div>
+            <h1 className={styles.title}> Canned {"&"} Dried Food </h1>
+            <ul>
+                {posts.map((post) => (
+                    <li>{post.id}</li>
+                ))}
+            </ul>
+        </div>
+    )
 }

@@ -1,4 +1,4 @@
-class Item{
+class Item {
 
     constructor(name, id, aisle, qty) {
         this._name = name;
@@ -23,7 +23,7 @@ class Item{
         return this._qty;
     }
 
-    toString(){
+    toString() {
         return "name: " + this._name + " id: " + this._id + " aisle: " + this._aisle + " qty " + this._qty;
     }
 
