@@ -1,33 +1,20 @@
-import styles from '../styles/Home.module.css';
-import {InferGetStaticPropsType} from "next";
+import {itemList} from "../data"
 
-type Item = {
-    name: string
-    id: number
-    aisle: number
-    qty: number
-}
+const CannedDriedFood = () => {
+  return (
+      <div>
+          <h1> Canned and Dried Foods </h1>
+          {itemList.map((item) => (
+              <div key={item.id}>
+                  <a>
+                      <h3> { item.name } </h3>
+                      <h3> {item.section}</h3>
+                  </a>
+              </div>
+          ))}
+      </div>
+  )
+};
 
-export const getStaticProps = async () => {
-    const res = await fetch('https://github.com/mileyseo/HEB-IOT-UI/blob/master/db.json')
-    const posts: Item[] = await res.json()
+export default CannedDriedFood;
 
-    return {
-        props: {
-            posts,
-        },
-    }
-}
-
-function CannedDriedFood({posts}: InferGetStaticPropsType<typeof getStaticProps>) {
-    return (
-        <div>
-            <h1 className={styles.title}> Canned {"&"} Dried Food </h1>
-            <ul>
-                {posts.map((post) => (
-                    <li>{post.id}</li>
-                ))}
-            </ul>
-        </div>
-    )
-}
