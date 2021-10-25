@@ -2,3 +2,4 @@
 node_modules/
 # next.js build output
 .next
+.next/build-manifest.json
