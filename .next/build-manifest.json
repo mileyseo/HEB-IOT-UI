@@ -1,33 +1,61 @@
 {
   "polyfillFiles": [
-    "static/chunks/polyfills.js"
+    "static/chunks/polyfills-a40ef1678bae11e696dba45124eadd70.js"
   ],
-  "devFiles": [
-    "static/chunks/react-refresh.js"
-  ],
-  "ampDevFiles": [
-    "static/chunks/webpack.js",
-    "static/chunks/amp.js"
-  ],
+  "devFiles": [],
+  "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/development/_buildManifest.js",
-    "static/development/_ssgManifest.js"
+    "static/OA7vj39hVJ9DU840SWfJu/_buildManifest.js",
+    "static/OA7vj39hVJ9DU840SWfJu/_ssgManifest.js"
   ],
   "pages": {
     "/": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/index.js"
+      "static/chunks/webpack-d8e36741ab81553a2e2e.js",
+      "static/chunks/framework-0441fae7fd130f37dee1.js",
+      "static/chunks/main-62b8caa3ccc47893b147.js",
+      "static/css/6b5cb5fa1179c19ca441.css",
+      "static/chunks/pages/index-9b1e5ed3306e03291620.js"
     ],
     "/_app": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/_app.js"
+      "static/chunks/webpack-d8e36741ab81553a2e2e.js",
+      "static/chunks/framework-0441fae7fd130f37dee1.js",
+      "static/chunks/main-62b8caa3ccc47893b147.js",
+      "static/css/43477f06b4f93d4e266d.css",
+      "static/chunks/pages/_app-d1cf7ab71e357ff07bfa.js"
     ],
     "/_error": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/_error.js"
+      "static/chunks/webpack-d8e36741ab81553a2e2e.js",
+      "static/chunks/framework-0441fae7fd130f37dee1.js",
+      "static/chunks/main-62b8caa3ccc47893b147.js",
+      "static/chunks/pages/_error-737a04e9a0da63c9d162.js"
+    ],
+    "/canned-dried-food": [
+      "static/chunks/webpack-d8e36741ab81553a2e2e.js",
+      "static/chunks/framework-0441fae7fd130f37dee1.js",
+      "static/chunks/main-62b8caa3ccc47893b147.js",
+      "static/chunks/cb1608f2-ed6bb93fb59d8c83966c.js",
+      "static/chunks/pages/canned-dried-food-2a4cef32c21c4d3a30fe.js"
+    ],
+    "/contact": [
+      "static/chunks/webpack-d8e36741ab81553a2e2e.js",
+      "static/chunks/framework-0441fae7fd130f37dee1.js",
+      "static/chunks/main-62b8caa3ccc47893b147.js",
+      "static/css/6b5cb5fa1179c19ca441.css",
+      "static/chunks/pages/contact-5fc337ebd04709b8b424.js"
+    ],
+    "/inventory": [
+      "static/chunks/webpack-d8e36741ab81553a2e2e.js",
+      "static/chunks/framework-0441fae7fd130f37dee1.js",
+      "static/chunks/main-62b8caa3ccc47893b147.js",
+      "static/css/6b5cb5fa1179c19ca441.css",
+      "static/chunks/pages/inventory-8c2ce7670a378f0af572.js"
+    ],
+    "/pantry": [
+      "static/chunks/webpack-d8e36741ab81553a2e2e.js",
+      "static/chunks/framework-0441fae7fd130f37dee1.js",
+      "static/chunks/main-62b8caa3ccc47893b147.js",
+      "static/css/6b5cb5fa1179c19ca441.css",
+      "static/chunks/pages/pantry-85196f283929b8c1f111.js"
     ]
   },
   "ampFirstPages": []

@@ -1,6 +1,13 @@
 {
   "/_app": "pages/_app.js",
+  "/api/hello": "pages/api/hello.js",
+  "/api/search": "pages/api/search.js",
+  "/canned-dried-food": "pages/canned-dried-food.html",
+  "/contact": "pages/contact.html",
+  "/": "pages/index.html",
+  "/inventory": "pages/inventory.html",
+  "/pantry": "pages/pantry.html",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js"
+  "/404": "pages/404.html"
 }

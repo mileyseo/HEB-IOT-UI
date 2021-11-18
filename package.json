@@ -6,13 +6,18 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "yarn build && gcloud app deploy --project nextjs-deploy",
+    "migrate": "node ./db/scripts/migration.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.16",
+    "bookshelf": "^1.2.0",
     "bootstrap": "^5.1.3",
+    "knex": "^0.95.14",
+    "mysql": "^2.18.1",
     "next": "11.1.2",
     "react": "17.0.2",
     "react-dom": "17.0.2"
