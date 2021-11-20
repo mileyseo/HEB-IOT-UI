@@ -8,7 +8,7 @@ export default async function handler (req, res) {
     // table.integer("shelfNo");
     // table.integer("quantity");
     const {
-        itemNo,
+        upc,
         itemName,
         aisleNo,
         sectionNo,
@@ -17,7 +17,7 @@ export default async function handler (req, res) {
     } = req.body;
 
     await veges.forge().save({
-        itemNo,
+        upc,
         itemName,
         aisleNo,
         sectionNo,

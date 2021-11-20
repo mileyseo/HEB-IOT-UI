@@ -5,8 +5,8 @@ const {
 } = connection();
 
 const veges = bookshelf.model("Vegetables", {
-    tableName: 'vegetables',
-    idAttribute: 'itemNo'
+    tableName: 'Vegetables',
+    idAttribute: 'upc'
 })
 
 module.exports = veges;
