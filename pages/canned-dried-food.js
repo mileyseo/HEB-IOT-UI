@@ -1,8 +1,20 @@
 import {itemList} from "../data"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faSearch} from "@fortawesome/free-solid-svg-icons";
+import fetch from "node-fetch";
+import ErrorPage from "next/error";
 
-const CannedDriedFood = () => {
+type Data = {
+    id: string,
+    name: string,
+    email: string,
+};
+
+const CannedDriedFood = () =>{
+    let props = getServerSideProps();
+    if (!props.data) {
+        return <ErrorPage statusCode={404} />;
+    }
     return (
         <div>
             <h1> Canned and Dried Foods </h1>
@@ -61,6 +73,26 @@ const CannedDriedFood = () => {
             </table>
         </div>
     )
+};
+
+export const getServerSideProps: GetServerSideProps = async ({
+                                                                 params,
+                                                                 res
+                                                             }) => {
+    try {
+        const {id} = params;
+        //  const result = await fetch(`https://eti-utdallas-iotshelf-dot-heb-eti-nonprod.uc.r.appspot.com/?upc={upc}`);
+        const result = await fetch('https://eti-utdallas-iotshelf-dot-heb-eti-nonprod.uc.r.appspot.com/?upc=7520000700');
+        const data: Data = await result.json();
+        return {
+            props: {data}
+        };
+    } catch {
+        res.statusCode = 404;
+        return {
+            props: {}
+        };
+    }
 };
 
 export default CannedDriedFood;
