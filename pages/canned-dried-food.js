@@ -4,17 +4,9 @@ import {faSearch} from "@fortawesome/free-solid-svg-icons";
 import fetch from "node-fetch";
 import ErrorPage from "next/error";
 
-type Data = {
-    id: string,
-    name: string,
-    email: string,
-};
 
-const CannedDriedFood = () =>{
-    let props = getServerSideProps();
-    if (!props.data) {
-        return <ErrorPage statusCode={404} />;
-    }
+
+const CannedDriedFood = ({ posts }) =>{
     return (
         <div>
             <h1> Canned and Dried Foods </h1>
@@ -59,41 +51,40 @@ const CannedDriedFood = () =>{
                 </tr>
                 </thead>
                 <tbody>
-                {itemList.map((item) => (
-                    <tr key={item.id}>
-                        <td>{item.itemNo}</td>
-                        <td>{item.name}</td>
-                        <td>{item.aisle}</td>
-                        <td>{item.section}</td>
-                        <td>{item.shelf}</td>
-                        <td>{item.qty}</td>
-                    </tr>
-                ))}
+                <ul>
+                    <li>{JSON.stringify(posts.description)}</li>
+                </ul>
+
+                    {/*<tr key={JSON.stringify(post.description)}>*/}
+                    {/*    <td>{post.product_id}</td>*/}
+                    {/*    <td>{JSON.stringify(post.aisle)}</td>*/}
+                    {/*    <td>{JSON.stringify(post.section)}</td>*/}
+                    {/*    <td>{JSON.stringify(post.shelf)}</td>*/}
+                    {/*    <td>{posts.qty}</td>*/}
+                    {/*</tr>*/}
+
                 </tbody>
             </table>
         </div>
     )
 };
 
-export const getServerSideProps: GetServerSideProps = async ({
-                                                                 params,
-                                                                 res
-                                                             }) => {
-    try {
-        const {id} = params;
-        //  const result = await fetch(`https://eti-utdallas-iotshelf-dot-heb-eti-nonprod.uc.r.appspot.com/?upc={upc}`);
-        const result = await fetch('https://eti-utdallas-iotshelf-dot-heb-eti-nonprod.uc.r.appspot.com/?upc=7520000700');
-        const data: Data = await result.json();
+export async function getStaticProps() {
+    const res = await fetch(`https://eti-utdallas-iotshelf-dot-heb-eti-nonprod.uc.r.appspot.com/?upc=7520000700`)
+    const posts = await res.json();
+
+    if (!posts) {
         return {
-            props: {data}
-        };
-    } catch {
-        res.statusCode = 404;
-        return {
-            props: {}
-        };
+            notFound: true,
+        }
     }
-};
+    return {
+        props: {
+            posts,
+        },
+    }
+}
+
 
 export default CannedDriedFood;
 
