@@ -12,11 +12,11 @@ async function main(args) {
       // quantity INT(4) NOT NULL,
       // PRIMARY KEY (itemNo)
       await knex.schema.createTable("Vegetables", (table) => {
-        table.increments("upc").primary();
-        table.string("itemName", 50);
-        table.string("aisleNo", 20);
-        table.integer("sectionNo");
-        table.integer("shelfNo");
+        table.bigIncrements("upc").primary();
+        //table.string("itemName", 50);
+        //table.string("aisleNo", 20);
+        //table.integer("sectionNo");
+        //table.integer("shelfNo");
         table.integer("quantity");
       });
       break;
