@@ -7,7 +7,7 @@ export default async function handler (req, res) {
     } = req.query;
 
     // this will build a SQL like select * from veges.. where upc = $1
-    const res_ = await veges.where({upc}).fetch()
+    const res_ = await veges.fetchAll();
 
     res.status(200).json({msg: "found", product: res_.toJSON()});
 }

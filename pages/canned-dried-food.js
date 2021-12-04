@@ -6,9 +6,20 @@ import ErrorPage from "next/error";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-function CannedDriedFood(props) {
-  // console.log(props);
-  const { posts, qty } = props;
+function CannedDriedFood() {
+  const [state, setState] = useState([]);
+    useEffect(() => {
+      axios
+        .get(`/api/getVegetable`)
+        .then((res) => {
+          console.log(res.data);
+          setState(res.data.product);
+        })
+        .catch((e) => {
+          console.error(e);
+        });
+    }, []);
+
   return (
     <div>
       <h1> Canned and Dried Foods </h1>
@@ -30,7 +41,6 @@ function CannedDriedFood(props) {
           Meat
         </label>
       </div>
-
       <div className="grouping">
         <button className="button button4"></button>
         <label className="langDescription" id="button4">
@@ -43,7 +53,6 @@ function CannedDriedFood(props) {
           Vegtables
         </label>
       </div>
-
       <div className="input-group rounded">
         <input
           type="search"
@@ -61,55 +70,31 @@ function CannedDriedFood(props) {
       <table className="table">
         <thead>
           <tr>
-            <th scope="col">Item #</th>
+            <th scope="col">UPC</th>
             <th scope="col">Item Name</th>
             <th scope="col">Aisle #</th>
+            <th scope="col">Aisle Side</th>
             <th scope="col">Section #</th>
             <th scope="col">Shelf #</th>
             <th scope="col">Quantity</th>
           </tr>
         </thead>
         <tbody>
-          <ul>
-            <li>{JSON.stringify(posts.description)}</li>
-            <li>{JSON.stringify(qty.product.quantity)}</li>
-          </ul>
-
-          {/*<tr key={JSON.stringify(post.description)}>*/}
-          {/*    <td>{post.product_id}</td>*/}
-          {/*    <td>{JSON.stringify(post.aisle)}</td>*/}
-          {/*    <td>{JSON.stringify(post.section)}</td>*/}
-          {/*    <td>{JSON.stringify(post.shelf)}</td>*/}
-          {/*    <td>{posts.qty}</td>*/}
-          {/*</tr>*/}
+          {state.map((product) => (
+            <tr key={JSON.stringify(product.upc)}>
+            <td>{JSON.stringify(product.upc)}</td>
+            <td>{JSON.stringify(product.itemName)}</td>
+            <td>{JSON.stringify(product.aisleNo)}</td>
+            <td>{JSON.stringify(product.aisleSide)}</td>
+            <td>{JSON.stringify(product.sectionNo)}</td>
+            <td>{JSON.stringify(product.shelfNo)}</td>
+            <td>{JSON.stringify(product.quantity)}</td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>
   );
-}
-
-export async function getServerSideProps() {
-  const res = await fetch(
-    "http://localhost:3000/api/getVegetable?upc=7520000700"
-  );
-  const qty = await res.json();
-
-  const res_ = await fetch(
-    "https://eti-utdallas-iotshelf-dot-heb-eti-nonprod.uc.r.appspot.com/?upc=7520000700"
-  );
-  const posts = await res_.json();
-
-  if (!posts) {
-    return {
-      notFound: true,
-    };
-  }
-  return {
-    props: {
-      posts,
-      qty,
-    },
-  };
 }
 
 export default CannedDriedFood;

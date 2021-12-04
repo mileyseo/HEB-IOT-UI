@@ -13,10 +13,11 @@ async function main(args) {
       // PRIMARY KEY (itemNo)
       await knex.schema.createTable("Vegetables", (table) => {
         table.bigIncrements("upc").primary();
-        //table.string("itemName", 50);
-        //table.string("aisleNo", 20);
-        //table.integer("sectionNo");
-        //table.integer("shelfNo");
+        table.string("itemName", 90);
+        table.integer("aisleNo");
+        table.string("aisleSide", 10);
+        table.integer("sectionNo");
+        table.integer("shelfNo");
         table.integer("quantity");
       });
       break;
