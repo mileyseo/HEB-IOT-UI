@@ -103,4 +103,3 @@ export default CannedDriedFood;
 //Need to add a conditional statement to make the
 //  <50 red, and others green
 //Search Bar!
-
