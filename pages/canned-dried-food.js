@@ -20,6 +20,8 @@ function CannedDriedFood() {
         });
     }, []);
 
+  const [searchTerm, setSearchTerm] = useState('');
+
   return (
     <div>
       <h1> Canned and Dried Foods </h1>
@@ -55,11 +57,12 @@ function CannedDriedFood() {
       </div>
       <div className="input-group rounded">
         <input
-          type="search"
+          type="text"
           className="form-control rounded"
-          placeholder="Search"
+          placeholder="Search..."
           aria-label="Search"
           aria-describedby="search-addon"
+          onChange={event => {setSearchTerm(event.target.value)}}
         />
         <span className="input-group-text border-0" id="search-addon">
           <i>
@@ -80,15 +83,21 @@ function CannedDriedFood() {
           </tr>
         </thead>
         <tbody>
-          {state.map((product) => (
-            <tr key={JSON.stringify(product.upc)}>
-            <td>{JSON.stringify(product.upc)}</td>
-            <td>{JSON.stringify(product.itemName)}</td>
-            <td>{JSON.stringify(product.aisleNo)}</td>
-            <td>{JSON.stringify(product.aisleSide)}</td>
-            <td>{JSON.stringify(product.sectionNo)}</td>
-            <td>{JSON.stringify(product.shelfNo)}</td>
-            <td>{JSON.stringify(product.quantity)}</td>
+          {state.filter((val) => {
+            if (searchTerm == "") {
+              return val
+            } else if (val.itemName.toLowerCase().includes(searchTerm.toLowerCase())) {
+              return val
+            }
+          }).map((product) => (
+            <tr key={product.upc}>
+            <td>{product.upc}</td>
+            <td>{product.itemName}</td>
+            <td>{product.aisleNo}</td>
+            <td>{product.aisleSide}</td>
+            <td>{product.sectionNo}</td>
+            <td>{product.shelfNo}</td>
+            <td>{product.quantity}</td>
             </tr>
           ))}
         </tbody>
@@ -98,8 +107,3 @@ function CannedDriedFood() {
 }
 
 export default CannedDriedFood;
-
-//Note for future:
-//Need to add a conditional statement to make the
-//  <50 red, and others green
-//Search Bar!
