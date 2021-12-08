@@ -83,6 +83,7 @@ a {
 
 .button1 {
     background-image: url("../public/pantry_pics/beans.jpeg");
+    
 }
 
 .button2 {
@@ -100,12 +101,12 @@ a {
 
 .button5 {
     background-image: url("../public/pantry_pics/canned-corn.png");
-
 }
 
 .grouping {
     display: inline-block;
     text-align: center;
+    padding: 10px 20px 20px 20px;
 }
 
 .langDescription {

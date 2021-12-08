@@ -35,3 +35,8 @@
 .contact {
     background-color: aqua;
 }
+
+.card {
+    text-align: center;
+    font-weight: bold;
+}
