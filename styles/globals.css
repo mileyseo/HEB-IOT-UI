@@ -1,114 +1,197 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto+Mono:wght@300&display=swap");
 
 body {
-    background: #f2f2f2;
-    color: #333;
-    font-family: "Nunito";
-    text-align: center;
+  background: #f2f2f2;
+  color: #333;
+  font-family: "Lato";
+  text-align: center;
 }
 
 .img {
-    background-image: url("../images/store_background.jpeg");
-    opacity: 0.5;
-    padding: 16%;
+  background-image: url("../images/heb.jpeg");
+  padding: 16%;
+  background-size: cover;
 }
 
 a {
-    color: #333;
-    text-decoration: none;
+  color: #333;
+  text-decoration: none;
+  margin-right: 10px;
+  margin-left: 12px;
+  font-family: "Lato";
 }
 
 .content {
-    max-width: auto;
-    margin: 0 auto;
+  max-width: auto;
+  margin: 0 auto;
 }
 
 nav {
-    margin: 10px auto 10px;
-    padding: 10px 0;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    border-bottom: 1px solid #ddd;
-}
-
-nav a {
-    margin-left: 12px;
+  margin: 10px 10px 0px 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 0px 30px 0px 30px;
 }
 
 nav .logo {
-    margin-right: auto;
+  margin-right: auto;
 }
 
 footer {
-    display: block;
-    text-align: center;
-    padding: 30px 0;
-    margin-top: 200px;
-    color: #777;
-    border-top: 1px solid #eaeaea;
+  display: block;
+  text-align: center;
+  padding: 30px 0;
+  color: #777;
+  border-top: 1px solid #eaeaea;
 }
 
 .contact {
-    padding: 5%;
-    text-align: center;
+  padding: 5%;
+  text-align: center;
 }
 
 h3 {
-    font-size: large;
+  font-size: large;
 }
 
 a {
-    color: blue;
+  color: rgb(105, 105, 105);
+  text-align: center;
 }
 
 .button {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100px;
-    height: 100px;
-    border: 0;
-    /*background-size: 40px auto; !* to specify dimensions explicitly *!*/
-    display: inline-block;
-    text-align: center;
-    color: orange;
-    border: none;
-    padding: 20px;
-    text-decoration: none;
-    font-size: 16px;
-    margin: 6px 4px;
-    border-radius: 70%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100px;
+  height: 100px;
+  border: 0;
+  /*background-size: 40px auto; !* to specify dimensions explicitly *!*/
+  display: inline-block;
+  text-align: center;
+  color: orange;
+  border: none;
+  padding: 20px;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 6px 4px;
+  border-radius: 70%;
 }
 
 .button1 {
-    background-image: url("../public/pantry_pics/beans.jpeg");
-    
+  background-image: url("../public/pantry_pics/beans.jpeg");
 }
 
 .button2 {
-    background-image: url("../public/pantry_pics/cranberries.png");
+  background-image: url("../public/pantry_pics/cranberries.png");
 }
 
 .button3 {
-    background-image: url("../public/pantry_pics/canned-chicken.png");
+  background-image: url("../public/pantry_pics/canned-chicken.png");
 }
 
 .button4 {
-    background-image: url("../public/pantry_pics/canned-tuna.png");
-
+  background-image: url("../public/pantry_pics/canned-tuna.png");
 }
 
 .button5 {
-    background-image: url("../public/pantry_pics/canned-corn.png");
+  background-image: url("../public/pantry_pics/canned-corn.png");
 }
 
 .grouping {
-    display: inline-block;
-    text-align: center;
-    padding: 10px 20px 20px 20px;
+  display: inline-block;
+  text-align: center;
+  padding: 10px 20px 20px 20px;
 }
 
 .langDescription {
-    display: block;
+  display: block;
+}
+
+.btn {
+  color: white;
+  font-weight: bold;
+  background-color: rgba(79, 168, 94, 0.979);
+  margin-top: 25px;
+  text-decoration: none;
+}
+
+.welcome {
+  background-color: white;
+  border-radius: 50% 20% / 10% 40%;
+  border: 2px solid rgb(21, 70, 31);
+  padding: 17px;
+  height: 80px;
+  margin: 10px 0px 0px 10px;
+  flex: auto;
+}
+
+.header {
+  background-color: white;
+  border-radius: 20px;
+  border: 2px solid rgb(21, 70, 31);
+  padding: 17px;
+  height: 80px;
+  margin-top: 10px;
+  flex: auto;
+  margin-bottom: 0px;
+}
+
+.btn1 {
+  background-image: url("../public/pantry_pics/baking.png");
+}
+
+.btn2 {
+  background-image: url("../public/pantry_pics/broth.png");
+}
+
+.btn3 {
+  background-image: url("../public/pantry_pics/canned-corn.png");
+}
+
+.btn4 {
+  background-image: url("../public/pantry_pics/cereal.png");
+}
+
+.btn5 {
+  background-image: url("../public/pantry_pics/condiments.png");
+}
+.btn6 {
+    background-image: url("../public/pantry_pics/dressing.png");
+  }
+  .btn7 {
+    background-image: url("../public/pantry_pics/jelly.png");
+  }
+  .btn8 {
+    background-image: url("../public/pantry_pics/pantrymeal.png");
+  }
+  .btn9 {
+    background-image: url("../public/pantry_pics/pasta.png");
+  }
+  .btn10 {
+    background-image: url("../public/pantry_pics/pb.png");
+  }
+  .btn11 {
+    background-image: url("../public/pantry_pics/salsa.png");
+  }
+  .btn12 {
+    background-image: url("../public/pantry_pics/sauce.png");
+  }
+  .btn13 {
+    background-image: url("../public/pantry_pics/snack.png");
+  }
+  .btn14 {
+    background-image: url("../public/pantry_pics/chili.png");
+  }
+  .btn15 {
+    background-image: url("../public/pantry_pics/spices.png");
+  }
+  .btn16 {
+    background-image: url("../public/pantry_pics/sugar.png");
+  }
+  
+.box {
+    background-color:#f2f2f2;
+    border-radius: 20%;
 }

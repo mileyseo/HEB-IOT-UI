@@ -1,8 +1,6 @@
 import { itemList } from "../data";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import fetch from "node-fetch";
-import ErrorPage from "next/error";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 

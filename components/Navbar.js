@@ -5,7 +5,7 @@ export default function Navbar() {
     return (
         <nav>
             <div className="logo">
-                <Link href="/"><Image src="/H-E-B_logo.svg.png" alt="logo" width={235} height={80}></Image></Link>
+                <Link href="/"><Image src="/H-E-B_logo.svg.png" alt="logo" width={175} height={60}></Image></Link>
             </div>
             <Link href="/"><a>Home</a></Link>
             <Link href="/contact"><a>Contact Us</a></Link>
